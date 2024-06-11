@@ -15,7 +15,7 @@ export const getAllTasks = () => async (dispatch) => {
 
     const task = await axios({
       method: "GET",
-      url: "http://localhost:4000/task",
+      url: "https://backend-1-fzu4.onrender.com/task",
     });
 
     dispatch(allTaskSuccess(task.data));
@@ -26,7 +26,7 @@ export const getAllTasks = () => async (dispatch) => {
 
 export const addTask = (data) => async (dispatch) => {
   try {
-    const response = await axios.post("http://localhost:4000/task", data);
+    const response = await axios.post("https://backend-1-fzu4.onrender.com/task", data);
     const task = response.data;
 
     // Dispatch action to update user state, assuming updateUserSuccess is defined
@@ -45,7 +45,7 @@ export const updateTask = (data) => async (dispatch) => {
     console.log(data);
     const task = await axios({
       method: "PUT",
-      url: "http://localhost:4000/task",
+      url: "https://backend-1-fzu4.onrender.com/task",
       data,
     });
     if (data.status === "completed") {
@@ -61,7 +61,7 @@ export const deleteTask = (task) => async (dispatch) => {
   try {
     await axios({
       method: "DELETE",
-      url: "http://localhost:4000/task",
+      url: "https://backend-1-fzu4.onrender.com/task",
       data: { _id: task._id },
     });
     if (task.status === "completed")
