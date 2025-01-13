@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className='flex justify-between items-center lg:px-8 px-4 py-3 shadow-lg bg-gradient-to-r from-purple-600 to-blue-500'>
             <div className='flex items-center'>
               
-                <h1 className='text-2xl font-bold text-white'>Tikur Creatives</h1>
+                <h1 className='text-2xl font-bold text-white'>Wendi's Todo App</h1>
             </div>
             {user && (
                 <button 
